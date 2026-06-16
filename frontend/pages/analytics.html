@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics - AMA Scheme</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <h1>AMA SCHEME</h1>
+      </div>
+      <nav class="nav-menu">
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="analytics.html" class="nav-link active">Analytics</a>
+        <button id="logoutBtn" class="nav-link btn-logout">Logout</button>
+      </nav>
+    </header>
+
+    <main class="analytics-container">
+      <div class="analytics-header">
+        <h2>Your Analytics</h2>
+      </div>
+
+      <div class="analytics-stats">
+        <div class="stat-card">
+          <h3>Total Attempts</h3>
+          <p class="stat-value" id="totalAttempts">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Wins</h3>
+          <p class="stat-value" id="totalWins">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Total Winnings</h3>
+          <p class="stat-value" id="totalWinnings">₦0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Average Score</h3>
+          <p class="stat-value" id="averageScore">0%</p>
+        </div>
+      </div>
+
+      <section class="analytics-section">
+        <h3>Quiz Performance</h3>
+        <table class="table" id="performanceTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Questions Answered</th>
+              <th>Score %</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="4" class="text-center">No quiz attempts yet</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 AMA Scheme. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/analytics.js"></script>
+</body>
+</html>

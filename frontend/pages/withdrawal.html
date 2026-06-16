@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Withdrawal - AMA Scheme</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <h1>AMA SCHEME</h1>
+      </div>
+      <nav class="nav-menu">
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="withdrawal.html" class="nav-link active">Withdraw</a>
+        <button id="logoutBtn" class="nav-link btn-logout">Logout</button>
+      </nav>
+    </header>
+
+    <main class="withdrawal-container">
+      <div class="withdrawal-header">
+        <h2>Withdrawal Request</h2>
+        <p id="availableBalance">Available Balance: ₦0</p>
+      </div>
+
+      <div class="withdrawal-content">
+        <form id="withdrawalForm">
+          <section class="form-section">
+            <h3>Withdrawal Amount</h3>
+            <div class="form-group">
+              <label for="withdrawalAmount">Amount (₦)</label>
+              <input type="number" id="withdrawalAmount" min="100" required>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h3>Bank Details</h3>
+            <div class="form-group">
+              <label for="bankName">Bank Name</label>
+              <input type="text" id="bankName" required>
+            </div>
+            <div class="form-group">
+              <label for="accountNumber">Account Number</label>
+              <input type="text" id="accountNumber" required>
+            </div>
+            <div class="form-group">
+              <label for="accountName">Account Name</label>
+              <input type="text" id="accountName" required>
+            </div>
+          </section>
+
+          <button type="submit" class="btn btn-primary btn-block">Request Withdrawal</button>
+          <div id="withdrawalMessage" class="alert" style="display:none;"></div>
+        </form>
+      </div>
+
+      <section class="withdrawal-history">
+        <h3>Withdrawal History</h3>
+        <table class="table" id="withdrawalTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Bank</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="4" class="text-center">No withdrawals yet</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 AMA Scheme. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/withdrawal.js"></script>
+</body>
+</html>

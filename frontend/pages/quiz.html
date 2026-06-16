@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - AMA Scheme</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <h1>AMA SCHEME</h1>
+      </div>
+      <nav class="nav-menu">
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="quiz.html" class="nav-link active">Quiz</a>
+        <button id="logoutBtn" class="nav-link btn-logout">Logout</button>
+      </nav>
+    </header>
+
+    <main class="quiz-container">
+      <div id="paymentSection" class="payment-section">
+        <div class="payment-box">
+          <h2>Quiz Payment Required</h2>
+          <p>Entry Fee: <strong>₦4,700</strong></p>
+          
+          <div class="opay-account">
+            <h3>AMA Scheme Opay Account</h3>
+            <p><strong>Account Name:</strong> AMA SCHEME</p>
+            <p><strong>Account Number:</strong> <span id="opayAccount">8000000000</span></p>
+            <p><strong>Bank:</strong> Opay</p>
+          </div>
+
+          <div class="payment-instructions">
+            <h4>Payment Instructions:</h4>
+            <ol>
+              <li>Make transfer to the Opay account above</li>
+              <li>Enter your payment reference below</li>
+              <li>Click "Verify Payment"</li>
+              <li>Start answering questions!</li>
+            </ol>
+          </div>
+
+          <div class="form-group">
+            <label for="paymentRef">Payment Reference:</label>
+            <input type="text" id="paymentRef" placeholder="Enter your payment reference">
+            <small id="generatedRef"></small>
+          </div>
+
+          <button id="verifyPaymentBtn" class="btn btn-primary btn-block">Verify Payment</button>
+          <div id="paymentMessage" class="alert" style="display:none;"></div>
+        </div>
+      </div>
+
+      <div id="quizSection" style="display:none;">
+        <div class="quiz-header">
+          <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+          <p>Question <span id="currentQuestion">1</span> of <span id="totalQuestions">12</span></p>
+          <p id="timer">Time: <span id="timeLeft">00:00</span></p>
+        </div>
+
+        <div class="quiz-content">
+          <h3 id="questionText"></h3>
+
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="answer" value="A">
+              <span id="optionA"></span>
+            </label>
+            <label class="option">
+              <input type="radio" name="answer" value="B">
+              <span id="optionB"></span>
+            </label>
+            <label class="option">
+              <input type="radio" name="answer" value="C">
+              <span id="optionC"></span>
+            </label>
+            <label class="option">
+              <input type="radio" name="answer" value="D">
+              <span id="optionD"></span>
+            </label>
+          </div>
+
+          <div class="quiz-buttons">
+            <button id="prevBtn" class="btn btn-secondary" style="display:none;">Previous</button>
+            <button id="nextBtn" class="btn btn-primary">Next</button>
+            <button id="submitBtn" class="btn btn-success" style="display:none;">Submit Quiz</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="resultSection" style="display:none;">
+        <div class="result-box">
+          <h2>Quiz Completed!</h2>
+          <div class="result-summary">
+            <p>Correct Answers: <strong id="correctCount">0</strong>/12</p>
+            <p>Score: <strong id="scorePercentage">0</strong>%</p>
+            <p id="resultMessage"></p>
+            <p id="prizeInfo" style="display:none;"><strong>Prize Won: ₦2,300,000</strong></p>
+          </div>
+          <a href="dashboard.html" class="btn btn-primary">Back to Dashboard</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 AMA Scheme. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>
